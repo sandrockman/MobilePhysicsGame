@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Star
   - Ground
+  - Cannon
   layers:
   - Default
   - TransparentFX

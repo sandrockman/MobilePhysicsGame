@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11467954}
   m_Layer: 0
   m_Name: PenguinPut
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd87b433814ea148a88bf12a1364daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  implode: 1.7
   velocity: 0
 --- !u!212 &21239838
 SpriteRenderer:
@@ -98,7 +99,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -948267023
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300010, guid: 3c4df537fdf19744f96902a3c7e9a0d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

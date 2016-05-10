@@ -29,11 +29,26 @@ public class CannonScript : MonoBehaviour {
 
     public int numStars;
     public int totalStars;
+    public float percentStarTotal = 0.8f;
     public Text starTotal;
     GameObject putContainer;
+    public GameObject fireButton;
+
+    public Canvas UICanvas;
+    public Canvas winCanvas;
+    public Canvas lostCanvas;
+
+    void Awake()
+    {
+        if (fireButton != null)
+            fireButton.SetActive(true);
+    }
 
     // Use this for initialization
     void Start () {
+        Time.timeScale = 1;
+        winCanvas.enabled = false;
+        lostCanvas.enabled = false;
         minRotate = transform.rotation.z - enterMinRotate;
         maxRotate = transform.rotation.z + enterMaxRotate;
         powerBar.minValue = minPower;
@@ -43,15 +58,26 @@ public class CannonScript : MonoBehaviour {
         numStars = 0;
         starTotal.text = numStars.ToString() + "/" + totalStars.ToString();
         putContainer = GameObject.Find("PutContainer");
+        if (fireButton != null)
+            fireButton.SetActive(true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        //reset fire button so player can fire new shot.
+        if(fireButton.activeSelf == false)
+        {
+            if(putContainer.transform.childCount <= 0)
+            {
+                fireButton.SetActive(true);
+            }
+        }
+        //set the power, cannon angle, and shots total meters.
         powerBar.value = power;
         angleBar.fillAmount = (maxRotate - cannonPoint) / (maxRotate - minRotate);
         shotsBar.fillAmount = (float)numberShots / (float)maxShots;
 
+        //WASD and space bar controls
         if(Input.GetKeyDown(KeyCode.W))
         {
             //increase power
@@ -85,9 +111,12 @@ public class CannonScript : MonoBehaviour {
             _FirePut();
         }
 
+        //Call to see if all shots have been fired and no win has been called.
         FinalCurtain();
 	}
-
+    /// <summary>
+    /// add to win score. if all are caught, win or next level.
+    /// </summary>
     public void DestroyStar()
     {
         numStars++;
@@ -100,16 +129,32 @@ public class CannonScript : MonoBehaviour {
     //The y to be changed by rotation
     void Cannonballs(float dir)
     {
-        GameObject cannonballInstance;
-        cannonballInstance = 
-            Instantiate(Resources.Load("PenguinPut"), transform.position, Quaternion.identity) as GameObject;
-        cannonballInstance.transform.Rotate(0, 0, 54);
-        cannonballInstance.GetComponent<Rigidbody2D>().velocity = 
-            new Vector2(power * Mathf.Cos((dir + currentRotate) * Mathf.PI / 180f), 
-                        power * Mathf.Sin((dir + currentRotate) * Mathf.PI / 180f));
-        cannonballInstance.transform.parent = putContainer.transform;
+        //if there are no children of the container holding shot puts
+        if (putContainer.transform.childCount <= 0)
+        {
+            //deactivate the fire button
+            fireButton.SetActive(false);
+            //create, instantiate, & give velocity to a shot put.
+            GameObject cannonballInstance;
+            cannonballInstance =
+                Instantiate(Resources.Load("PenguinPut"), transform.position, Quaternion.identity) as GameObject;
+            cannonballInstance.transform.Rotate(0, 0, 54);
+            cannonballInstance.GetComponent<Rigidbody2D>().velocity =
+                new Vector2(power * Mathf.Cos((dir + currentRotate) * Mathf.PI / 180f),
+                            power * Mathf.Sin((dir + currentRotate) * Mathf.PI / 180f));
+            //make shot put a child of the put container
+            cannonballInstance.transform.parent = putContainer.transform;
+            //have camera follow the shot put.
+            GameObject.Find("Main Camera").GetComponent<CameraFollowScript>().player =
+                        cannonballInstance.transform;
+            //decrement total shots available.
+            numberShots--;
+        }
     }
 
+    /// <summary>
+    /// increase power one step
+    /// </summary>
     public void _IncreasePower()
     {
         //increase power
@@ -118,7 +163,9 @@ public class CannonScript : MonoBehaviour {
             power++;
         }
     }
-
+    /// <summary>
+    /// decrease power one step.
+    /// </summary>
     public void _DecreasePower()
     {
         //decrease power
@@ -127,7 +174,9 @@ public class CannonScript : MonoBehaviour {
             power--;
         }
     }
-
+    /// <summary>
+    /// increase angle by one rotationStep
+    /// </summary>
     public void _IncreaseAngle()
     {
         //Increase rotation
@@ -136,7 +185,9 @@ public class CannonScript : MonoBehaviour {
             transform.Rotate(Vector3.forward, rotationStep);
         }
     }
-
+    /// <summary>
+    /// decrease angle by one rotationStep
+    /// </summary>
     public void _DecreaseAngle()
     {
         //Decrease rotation
@@ -146,25 +197,35 @@ public class CannonScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// call the cannonball function if shots are still available.
+    /// </summary>
     public void _FirePut()
     {
         if (numberShots > 0)
         {
             Cannonballs(cannonPoint);
-            numberShots--;
         }
     }
-
+    /// <summary>
+    /// if there are no more shots, then show appropriate canvas.
+    /// </summary>
     public void FinalCurtain()
     {
         if(numberShots <= 0)
         {
             if(putContainer.transform.childCount <= 0)
             {
-                if(numStars == totalStars)
+                Time.timeScale = 0;
+                if (((float)numStars/(float)totalStars) >= percentStarTotal)
                 {
-                    Time.timeScale = 0;
-                    
+                    //win condition
+                    winCanvas.enabled = true;
+                }
+                else
+                {
+                    //loseCondition
+                    lostCanvas.enabled = true;
                 }
             }
         }

@@ -8,7 +8,9 @@ public class OutOfBounds : MonoBehaviour {
     {
         if (other.gameObject.tag != "Star")
         {
-            
+            if (other.gameObject.tag == "Player")
+                GameObject.Find("Main Camera").GetComponent<CameraFollowScript>().player =
+                    GameObject.Find("Cannon").transform;
             Destroy(other.gameObject);
         }
     }
