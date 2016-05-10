@@ -29,6 +29,8 @@ public class CannonScript : MonoBehaviour {
 
     public int numStars;
     public int totalStars;
+    public Text starTotal;
+    GameObject putContainer;
 
     // Use this for initialization
     void Start () {
@@ -39,6 +41,8 @@ public class CannonScript : MonoBehaviour {
         numberShots = maxShots;
         totalStars = GameObject.FindGameObjectsWithTag("Star").Length;
         numStars = 0;
+        starTotal.text = numStars.ToString() + "/" + totalStars.ToString();
+        putContainer = GameObject.Find("PutContainer");
 	}
 	
 	// Update is called once per frame
@@ -50,18 +54,14 @@ public class CannonScript : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.W))
         {
-            if(power < maxPower)
-            {
-                power++;
-            }
+            //increase power
+            _IncreasePower();
         }
 
         if(Input.GetKeyDown(KeyCode.S))
         {
-            if(power > minPower)
-            {
-                power--;
-            }
+            //decrease power
+            _DecreasePower();
         }
         
         cannonPoint = transform.rotation.eulerAngles.z;
@@ -71,36 +71,27 @@ public class CannonScript : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.A))
         {
             //Increase rotation
-            if (cannonPoint <= maxRotate)
-            {
-                transform.Rotate(Vector3.forward, rotationStep);
-            }
+            _IncreaseAngle();
         }
         
         if(Input.GetKeyDown(KeyCode.D))
         {
             //Decrease rotation
-            if (cannonPoint >= minRotate)
-            {
-                transform.Rotate(Vector3.forward, -rotationStep);
-            }
-
+            _DecreaseAngle();
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (numberShots > 0)
-            {
-                numberShots--;
-                Cannonballs(cannonPoint);
-            }
+            _FirePut();
         }
 
+        FinalCurtain();
 	}
 
     public void DestroyStar()
     {
         numStars++;
+        starTotal.text = numStars.ToString() + "/" + totalStars.ToString();
         if (numStars == totalStars)
             Debug.Log("Game Won");
     }
@@ -111,10 +102,71 @@ public class CannonScript : MonoBehaviour {
     {
         GameObject cannonballInstance;
         cannonballInstance = 
-            Instantiate(Resources.Load("CannonBall"), transform.position, Quaternion.identity) as GameObject;
+            Instantiate(Resources.Load("PenguinPut"), transform.position, Quaternion.identity) as GameObject;
         cannonballInstance.transform.Rotate(0, 0, 54);
         cannonballInstance.GetComponent<Rigidbody2D>().velocity = 
             new Vector2(power * Mathf.Cos((dir + currentRotate) * Mathf.PI / 180f), 
                         power * Mathf.Sin((dir + currentRotate) * Mathf.PI / 180f));
+        cannonballInstance.transform.parent = putContainer.transform;
+    }
+
+    public void _IncreasePower()
+    {
+        //increase power
+        if (power < maxPower)
+        {
+            power++;
+        }
+    }
+
+    public void _DecreasePower()
+    {
+        //decrease power
+        if (power > minPower)
+        {
+            power--;
+        }
+    }
+
+    public void _IncreaseAngle()
+    {
+        //Increase rotation
+        if (cannonPoint <= maxRotate)
+        {
+            transform.Rotate(Vector3.forward, rotationStep);
+        }
+    }
+
+    public void _DecreaseAngle()
+    {
+        //Decrease rotation
+        if (cannonPoint >= minRotate)
+        {
+            transform.Rotate(Vector3.forward, -rotationStep);
+        }
+    }
+
+    public void _FirePut()
+    {
+        if (numberShots > 0)
+        {
+            Cannonballs(cannonPoint);
+            numberShots--;
+        }
+    }
+
+    public void FinalCurtain()
+    {
+        if(numberShots <= 0)
+        {
+            if(putContainer.transform.childCount <= 0)
+            {
+                if(numStars == totalStars)
+                {
+                    Time.timeScale = 0;
+                    
+                }
+            }
+        }
     }
 }

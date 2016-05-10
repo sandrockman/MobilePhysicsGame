@@ -15,11 +15,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BackDrop
+  - BackgroundItems
+  - Player
+  - Foreground
+  - ForegroundCurtain
   - 
   - 
   - 
@@ -42,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackDrop
+    uniqueID: 2573739885
+    locked: 0
+  - name: BackgroundItems
+    uniqueID: 752003013
+    locked: 0
+  - name: Player
+    uniqueID: 3346700273
+    locked: 0
+  - name: Foreground
+    uniqueID: 2958310713
+    locked: 0
+  - name: ForegroundCurtain
+    uniqueID: 1426364245
     locked: 0

@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: a4028985f0b1f364a97aebc54801e27a
+timeCreated: 1462841729
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet_stall_0
+    21300002: spritesheet_stall_1
+    21300004: spritesheet_stall_2
+    21300006: spritesheet_stall_3
+    21300008: spritesheet_stall_4
+    21300010: spritesheet_stall_5
+    21300012: spritesheet_stall_6
+    21300014: spritesheet_stall_7
+    21300016: spritesheet_stall_8
+    21300018: spritesheet_stall_9
+    21300020: spritesheet_stall_10
+    21300022: spritesheet_stall_11
+    21300024: spritesheet_stall_12
+    21300026: spritesheet_stall_13
+    21300028: spritesheet_stall_14
+    21300030: spritesheet_stall_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spritesheet_stall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 722
+        width: 256
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128, y: 40}
+        - {x: -128, y: 40}
+        - {x: -128, y: -37}
+        - {x: -117, y: -40}
+        - {x: 128, y: -40}
+    - name: spritesheet_stall_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 546
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+    - name: spritesheet_stall_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 586
+        width: 132
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 95}
+        - {x: 12, y: 86}
+        - {x: -14, y: 95}
+        - {x: -25, y: 108}
+        - {x: -42, y: 108}
+        - {x: -66, y: 86}
+        - {x: -66, y: -108}
+        - {x: 66, y: -108}
+        - {x: 66, y: 85}
+        - {x: 64, y: 85}
+    - name: spritesheet_stall_3
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 376
+        width: 131
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37.5, y: 39}
+        - {x: 65.5, y: 112}
+        - {x: 65.5, y: 210}
+        - {x: 61.5, y: 213}
+        - {x: -62.5, y: 213}
+        - {x: -65.5, y: 212}
+        - {x: -65.5, y: -197}
+        - {x: -54.5, y: -208}
+        - {x: -41.5, y: -213}
+        - {x: 3.5, y: -213}
+        - {x: 14.5, y: -200}
+        - {x: 0.5, y: -57}
+        - {x: -22.5, y: -16}
+    - name: spritesheet_stall_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+    - name: spritesheet_stall_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 288
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+    - name: spritesheet_stall_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 360
+        width: 132
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 89}
+        - {x: 9, y: 112}
+        - {x: -9, y: 112}
+        - {x: -30, y: 89}
+        - {x: -42, y: 81}
+        - {x: -66, y: 73}
+        - {x: -66, y: -112}
+        - {x: 66, y: -112}
+        - {x: 66, y: 72}
+        - {x: 59, y: 74}
+    - name: spritesheet_stall_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+    - name: spritesheet_stall_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 42
+        width: 143
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: 122}
+        - {x: -29.5, y: 122}
+        - {x: -70.5, y: 76}
+        - {x: -71.5, y: 65}
+        - {x: -71.5, y: -68}
+        - {x: -33.5, y: -122}
+        - {x: 39.5, y: -122}
+        - {x: 71.5, y: -72}
+        - {x: 71.5, y: 28}
+        - {x: 69.5, y: 61}
+    - name: spritesheet_stall_9
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 204
+        width: 134
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 41}
+        - {x: -67, y: 33}
+        - {x: -67, y: -41}
+        - {x: 60, y: -41}
+        - {x: 67, y: -40}
+        - {x: 67, y: 26}
+        - {x: 36, y: 41}
+    - name: spritesheet_stall_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 135
+        width: 132
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 108.5}
+        - {x: 22, y: 111.5}
+        - {x: 6, y: 111.5}
+        - {x: -16, y: 94.5}
+        - {x: -48, y: 78.5}
+        - {x: -66, y: 72.5}
+        - {x: -66, y: -111.5}
+        - {x: 66, y: -111.5}
+        - {x: 66, y: 72.5}
+        - {x: 47, y: 79.5}
+    - name: spritesheet_stall_11
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 119
+        width: 119
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 53.5}
+        - {x: -3.5, y: 127.5}
+        - {x: -32.5, y: 127.5}
+        - {x: -59.5, y: -10.5}
+        - {x: -59.5, y: -109.5}
+        - {x: -34.5, y: -127.5}
+        - {x: 21.5, y: -127.5}
+        - {x: 22.5, y: -116.5}
+        - {x: 59.5, y: -81.5}
+        - {x: 59.5, y: -57.5}
+    - name: spritesheet_stall_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 200
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -100, y: 31.5}
+        - {x: -100, y: -15.5}
+        - {x: -66, y: -31.5}
+        - {x: 82, y: -31.5}
+        - {x: 100, y: -16.5}
+        - {x: 100, y: 31.5}
+    - name: spritesheet_stall_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2
+        width: 132
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 86}
+        - {x: 20, y: 85}
+        - {x: -1, y: 95}
+        - {x: -11, y: 100}
+        - {x: -54, y: 100}
+        - {x: -66, y: 94}
+        - {x: -66, y: -100}
+        - {x: 66, y: -100}
+        - {x: 66, y: 93}
+        - {x: 64, y: 93}
+    - name: spritesheet_stall_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 141
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 42}
+        - {x: -70.5, y: -2}
+        - {x: -70.5, y: -37}
+        - {x: -69.5, y: -42}
+        - {x: 70.5, y: -42}
+        - {x: 70.5, y: 30}
+        - {x: 13.5, y: 42}
+    - name: spritesheet_stall_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
