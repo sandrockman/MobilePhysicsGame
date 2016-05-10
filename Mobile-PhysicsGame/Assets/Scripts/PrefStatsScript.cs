@@ -17,7 +17,6 @@ public static class PrefStatsScript {
 
     public static void SetPlayerPrefs()
     {
-        //isSpells = true;
         if (!PlayerPrefs.HasKey("PipLevel1"))
         {
             PlayerPrefs.SetInt("PipLevel1", 0);
@@ -38,7 +37,34 @@ public static class PrefStatsScript {
     public static void checkMax(int currentLevel, int stars)
     {
         Debug.Log("max to check" + currentLevel);
-        if (PlayerPrefs.GetInt("PipLevel" + currentLevel) < stars)
-            PlayerPrefs.SetInt("PipLevel" + currentLevel, stars);
+        switch(currentLevel)
+        {
+            case 1:
+                if (PlayerPrefs.GetInt("PipLevel1") < stars)
+                    PlayerPrefs.SetInt("PipLevel1", stars);
+                break;
+            case 2:
+                if (PlayerPrefs.GetInt("PipLevel2") < stars)
+                    PlayerPrefs.SetInt("PipLevel2", stars);
+                break;
+            case 3:
+                if (PlayerPrefs.GetInt("PipLevel3") < stars)
+                    PlayerPrefs.SetInt("PipLevel3", stars);
+                break;
+            case 4:
+                if (PlayerPrefs.GetInt("PipLevel4") < stars)
+                    PlayerPrefs.SetInt("PipLevel4", stars);
+                break;
+            case 5:
+                if (PlayerPrefs.GetInt("PipLevel5") < stars)
+                    PlayerPrefs.SetInt("PipLevel5", stars);
+                break;
+            case 6:
+                if (PlayerPrefs.GetInt("PipLevel6") < stars)
+                    PlayerPrefs.SetInt("PipLevel6", stars);
+                break;
+            default:
+                break;
+        }
     }
 }

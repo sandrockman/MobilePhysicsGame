@@ -14,14 +14,14 @@ public class LevelSetupScript : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         if (PrefStatsScript.PipLevel1 == 0)
         {
             //still needs to be available.
         }
         else
         {
-            buttonL1.GetComponent<Text>().text = "Level 1:\nStars-" + PrefStatsScript.PipLevel1;
+            buttonL1.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 1:\nStars-" + PrefStatsScript.PipLevel1;
         }
         //level 2 
         if (PrefStatsScript.PipLevel2 == 0)
@@ -30,7 +30,7 @@ public class LevelSetupScript : MonoBehaviour {
         }
         else
         {
-            buttonL2.GetComponent<Text>().text = "Level 2:\nStars-" + PrefStatsScript.PipLevel2;
+            buttonL2.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 2:\nStars-" + PrefStatsScript.PipLevel2;
         }
         //level 3
         if (PrefStatsScript.PipLevel3 == 0)
@@ -39,7 +39,7 @@ public class LevelSetupScript : MonoBehaviour {
         }
         else
         {
-            buttonL3.GetComponent<Text>().text = "Level 3:\nStars-" + PrefStatsScript.PipLevel3;
+            buttonL3.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 3:\nStars-" + PrefStatsScript.PipLevel3;
         }
         //level 4
         if (PrefStatsScript.PipLevel4 == 0)
@@ -48,7 +48,7 @@ public class LevelSetupScript : MonoBehaviour {
         }
         else
         {
-            buttonL4.GetComponent<Text>().text = "Level 4:\nStars-" + PrefStatsScript.PipLevel4;
+            buttonL4.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 4:\nStars-" + PrefStatsScript.PipLevel4;
         }
         //level 5
         if (PrefStatsScript.PipLevel5 == 0)
@@ -57,16 +57,16 @@ public class LevelSetupScript : MonoBehaviour {
         }
         else
         {
-            buttonL5.GetComponent<Text>().text = "Level 5:\nStars-" + PrefStatsScript.PipLevel5;
+            buttonL5.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 5:\nStars-" + PrefStatsScript.PipLevel5;
         }
         //level 6
-        if (PrefStatsScript.PipLevel2 == 0)
+        if (PrefStatsScript.PipLevel6 == 0)
         {
             buttonL6.SetActive(false);
         }
         else
         {
-            buttonL6.GetComponent<Text>().text = "Level 6:\nStars-" + PrefStatsScript.PipLevel6;
+            buttonL6.GetComponent<Button>().GetComponentInChildren<Text>().text = "Level 6:\nStars-" + PrefStatsScript.PipLevel6;
         }
 
 
