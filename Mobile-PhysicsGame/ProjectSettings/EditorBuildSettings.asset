@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
   - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+  - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
   - enabled: 1
     path: Assets/Scenes/InstructionScene.unity
@@ -15,3 +17,13 @@ EditorBuildSettings:
     path: Assets/Scenes/PhysicsScene1.unity
   - enabled: 1
     path: Assets/Scenes/PhysicsScene2.unity
+  - enabled: 1
+    path: Assets/Scenes/PhysicsScene3.unity
+  - enabled: 0
+    path: Assets/Scenes/PhysicsScene3.unity
+  - enabled: 1
+    path: Assets/Scenes/PhysicsScene4.unity
+  - enabled: 1
+    path: Assets/Scenes/PhysicsScene5.unity
+  - enabled: 1
+    path: Assets/Scenes/PhysicsScene6.unity

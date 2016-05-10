@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CannonScript : MonoBehaviour {
 
@@ -122,7 +123,10 @@ public class CannonScript : MonoBehaviour {
         numStars++;
         starTotal.text = numStars.ToString() + "/" + totalStars.ToString();
         if (numStars == totalStars)
+        {
             Debug.Log("Game Won");
+            Win();
+        }
     }
 
     //The x to be changed by power
@@ -219,8 +223,7 @@ public class CannonScript : MonoBehaviour {
                 Time.timeScale = 0;
                 if (((float)numStars/(float)totalStars) >= percentStarTotal)
                 {
-                    //win condition
-                    winCanvas.enabled = true;
+                    Win();
                 }
                 else
                 {
@@ -230,4 +233,19 @@ public class CannonScript : MonoBehaviour {
             }
         }
     }
+    public void Win()
+    {
+        //win condition
+        winCanvas.enabled = true;
+        //figure out star allotment
+        int stars = 1;
+        if (numStars == totalStars)
+            stars = 3;
+        else if (((float)numStars / (float)totalStars) >= 0.9f)
+            stars = 2;
+        int check = SceneManager.GetActiveScene().buildIndex;
+        check -= 3;
+        PrefStatsScript.checkMax(check, stars);
+        GameObject.Find("StarWinText").GetComponent<Text>().text = stars.ToString() + " Stars!";
+    } 
 }

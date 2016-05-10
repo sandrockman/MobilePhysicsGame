@@ -10,6 +10,11 @@ public class MenuButtonScript : MonoBehaviour {
         SceneManager.LoadScene("MenuScene");
     }
 
+    public void _GoToLevelSelect()
+    {
+        SceneManager.LoadScene("LevelScene");
+    }
+
     public void _GoToCredits()
     {
         SceneManager.LoadScene("CreditsScene");

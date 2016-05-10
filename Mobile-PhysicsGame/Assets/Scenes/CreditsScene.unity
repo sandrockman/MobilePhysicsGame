@@ -583,7 +583,7 @@ RectTransform:
   m_Father: {fileID: 974451365}
   m_RootOrder: 7
   m_AnchorMin: {x: 0.037151523, y: 0.18936364}
-  m_AnchorMax: {x: 0.9725758, y: 0.74700004}
+  m_AnchorMax: {x: 0.9725758, y: 0.66145456}
   m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: -2, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -613,27 +613,25 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Story: Pip the penguin was really happy with his purchase of so many rubber
-    duckies for his collection. They make him feel like he can fly. But he didn''t
-    realize his bag broke! Now they are scattered all over his path home. Would you
-    help him both recover his precious ducks and help him realize his passion for
-    flight by rocketing him across the land in search of his ducks?
+  m_Text: '"Dimbo" Font by Jayvee D Enaguas(https://dribbble.com/shots/2261532--Funtique-game-UI-kit-free-PSD)
+    is licensed under CC-BY-3.0.
 
+    "Happy Happy Game Show" by Kevin Macleod (incompetech.com) is licensed under CC-BY-3.0.
 
-    Objective: Fire Pip out of the cannon you so conveniently have to retrieve his
-    rubber ducks. Use the arrow buttons on the screen (or WASD) to change the angle
-    of the cannon (A,D) or the firing power (W,S). Hit the Fire! button (or space
-    bar on the computer) to shoot Pip out. Pip can''t grab the ducks while he''s flying
-    and some of those crates are really tall, so the ducks HAVE to hit the ground
-    to be collected. (How did they get up there in the first place, you ask? They''re
-    rubber! They must have bounced!) Pip got them on sale, so try to get at least
-    80% back per level. 6 Levels in total.'
+    "Kenney Animal Pack", "On Screen Controls", "Shooting Gallery Pack" by Kenney
+    Game Assets(http://kenney.nl/assets) is liensed under CC-BY-3.0.
+
+    Additional artwork supplied by Tiffany Fisher is licensed under CC-BY-3.0.
+
+    Built in Unity 5.3.3
+
+    Cobbled together by some Game Dev Student.'
 --- !u!222 &768780898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -926,6 +924,7 @@ RectTransform:
   - {fileID: 1498200458}
   - {fileID: 1341752634}
   - {fileID: 768780896}
+  - {fileID: 1285558066}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -956,6 +955,7 @@ GameObject:
   - 92: {fileID: 1070911078}
   - 124: {fileID: 1070911077}
   - 81: {fileID: 1070911076}
+  - 82: {fileID: 1070911081}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1030,6 +1030,153 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &1070911081
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070911075}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7730dbb29552f9b4c900b41c214300ed, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.13
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!1 &1285558065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1285558066}
+  - 222: {fileID: 1285558068}
+  - 114: {fileID: 1285558067}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1285558066
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285558065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974451365}
+  m_RootOrder: 8
+  m_AnchorMin: {x: 0.037151523, y: 0.6758182}
+  m_AnchorMax: {x: 0.9725758, y: 0.74700004}
+  m_AnchoredPosition: {x: 0.012481689, y: -1.5}
+  m_SizeDelta: {x: -2, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1285558067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285558065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 176b608e79b632a4486b580abe331cba, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: CREDITS
+--- !u!222 &1285558068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285558065}
 --- !u!1 &1323982544
 GameObject:
   m_ObjectHideFlags: 0
